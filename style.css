@@ -28,7 +28,7 @@ h2.titulo {
 }
 
 .btn-contato button {
-   padding: 10px 40px;
+   padding: 10px 35px;
    font-size: 18px;
    font-weight: 600;
    border: 0;
@@ -117,7 +117,8 @@ section.topo-do-site .flex {
    gap: 20px;
    align-items: center;
 }
-.topo-do-site .contato-cv .btn-contato .btn2{
+
+.topo-do-site .contato-cv .btn-contato .btn2 {
    background-color: #000000
 }
 
@@ -143,22 +144,10 @@ section.especialidades {
    align-items: center;
 }
 
-.especialidades .interface h1 {
-   font-size: 50px;
-}
-
-.especialidades .interface h2 span {
-   color: #f7975b
-}
-
 .especialidades .flex {
-   display: flow-root;
+   display: flex;
    justify-content: center;
    color: #FFF;
-}
-
-.especialidades .flex span {
-   color: #f7975b;
 }
 
 .especialidades .fila-conhecimentos-1 {
@@ -167,24 +156,29 @@ section.especialidades {
    padding: 10px;
 }
 
-.especialidades .fila-conhecimentos-2 {
-   display: flex;
-   justify-content: center;
-   gap: 30px;
-   margin-bottom: 50px;
+.especialidades .interface h2 span {
+   color: #f7975b
+}
+
+
+.especialidades .flex span {
+   color: #f7975b;
 }
 
 .especialidades .conhecimento {
    padding: 30px 10px;
    font-weight: 200;
-   border: solid 1px #f7975b ;
    border-radius: 30px;
-   box-shadow: 0px 0px 8px #f7975b;
+
 
 }
 
+.especialidades .conhecimento:hover {
+   box-shadow: 0px 0px 8px #f7975b;
+}
+
 .especialidades .conhecimento h3 {
-   font-size: 28px;
+   font-size: 18px;
    margin: 15px 0;
 
 }
@@ -194,27 +188,31 @@ section.especialidades {
 
 }
 
-.sobre{
-   padding: 20px 0 ;
-}
-.sobre .foto{
-   padding-right: 30px;
+/* Sobre */
+.sobre {
+   padding: 20px 0;
 }
 
-.sobre .biografia{
-   
+.sobre .flex {
+   display: flex;
+   justify-content: center;
+   gap: 30px;
+
 }
-.sobre .biografia span{
+
+.sobre .biografia span {
    color: #f7975b;
 }
-.sobre .biografia .btn-social{
+
+.sobre .biografia .btn-social {
    padding-top: 10px;
 }
-.btn-social button{
-   
+
+.btn-social button {
+
    width: 50px;
    height: 50px;
-  border-radius: 50%;
+   border-radius: 50%;
    font-size: 25px;
    border: none;
    background-color: #FF914D;
@@ -226,33 +224,114 @@ section.especialidades {
    box-shadow: 0px 0px 8px #f7975b;
    transform: scale(1.05);
 }
+
 /* ESTILO FOOTER */
-.footer{
-   box-shadow:  0px 0px 8px #f7975b;
+.footer {
+   box-shadow: 0px 0px 8px #f7975b;
    padding: 20px 4%;
 }
-.footer img{
+
+.footer img {
    width: 70%;
    height: 70%;
 }
-.footer .linha-1{
+
+.footer .linha-1 {
    display: flex;
    align-items: center;
    justify-content: space-between;
    padding: 10px 0;
    border-bottom: solid 2px #f7975b;
 }
-.footer .linha-2{
-   padding:30px 0 0 0 ;
+
+.footer .linha-2 {
+   padding: 30px 0 0 0;
    display: flex;
    justify-content: center;
 }
-.footer .linha-2 p{
+
+.footer .linha-2 p {
    color: #f7975b;
 }
-.footer .linha-2 a{
+
+.footer .linha-2 a {
    text-decoration: none;
    color: #FFF;
 }
 
+@media screen and (max-width: 1140px) {
 
+   /* Classe global */
+   * {
+      width: 100%;
+   }
+
+   .flex {
+      flex-direction: column;
+      padding: 0 4%;
+   }
+
+   /* Cabecalho */
+   .menu-desktop,
+   .btn-contato {
+      display: none;
+   }
+
+   /* Topo do site */
+   section.topo-do-site .flex {
+      gap: 20px;
+   }
+
+   section.topo-do-site {
+      padding: 20px 4%;
+   }
+
+   .topo-do-site .txt-topo-site h1 {
+      font-size: 32px;
+      line-height: 30px;
+
+   }
+
+   .topo-do-site .contato-cv .btn-contato {
+      display: flex;
+      justify-content: left;
+
+   }
+
+   .topo-do-site .img-topo {
+      position: relative;
+      justify-content: center;
+      width: 80%;
+      height: 100%;
+   }
+
+   /* Especialidade */
+   .especialidades {
+      padding: 5px 4%;
+   }
+
+   .especialidades .fila-conhecimentos-1 {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 30px;
+   }
+
+   /* Sobre */
+   .sobre {
+      padding: 0 4% 10px 4%;
+      
+   }
+
+   .sobre .flex {
+      align-items: center;
+      display: flex;
+   }
+
+   .sobre .foto {
+      position: relative;
+      width: 70%;
+      height: 70%;
+   }
+
+}
